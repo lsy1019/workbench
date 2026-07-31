@@ -1,6 +1,0 @@
-.breadcrumb { display: flex; align-items: center; gap: 2px; padding: 12px 0 4px; flex-wrap: wrap; }
-.breadcrumb-item { display: flex; align-items: center; gap: 4px; }
-.breadcrumb-sep { color: var(--text-tertiary); font-size: 18px; margin: 0 4px; }
-.breadcrumb-link { border: none; background: none; font-family: var(--font-family); font-size: var(--font-size-sm); color: var(--macaron-rose); cursor: pointer; font-weight: 500; padding: 2px 4px; border-radius: 4px; transition: background 0.15s; }
-.breadcrumb-link:hover { background: var(--macaron-blush); }
-.breadcrumb-current { font-size: var(--font-size-sm); color: var(--text-primary); font-weight: 600; }
