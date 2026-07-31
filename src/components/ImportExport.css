@@ -1,0 +1,117 @@
+/* 按钮组 */
+.ie-wrapper {
+  display: inline-flex;
+  gap: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.ie-btn {
+  font-size: 12px !important;
+  padding: 5px 12px !important;
+}
+
+/* 下拉菜单 */
+.ie-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+.ie-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  min-width: 140px;
+  overflow: hidden;
+}
+.ie-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+  transition: background 0.15s;
+}
+.ie-dropdown button:hover {
+  background: var(--macaron-blush);
+}
+
+/* 导入弹窗 */
+.ie-modal {
+  max-width: 500px;
+  margin: auto;
+}
+.ie-modal-wrapper {
+  align-items: center !important;
+}
+.ie-modal-desc {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* 拖拽区域 */
+.ie-dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+.ie-dropzone:hover,
+.ie-dropzone.active {
+  border-color: var(--macaron-rose);
+  background: var(--macaron-blush);
+}
+.ie-dropzone-icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 8px;
+}
+.ie-dropzone p {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.ie-dropzone-hint {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.ie-error {
+  font-size: var(--font-size-sm);
+  color: var(--color-loss);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: var(--macaron-blush);
+  border-radius: var(--radius-sm);
+}
+
+.ie-textarea-section {
+  margin-bottom: 12px;
+}
+.ie-section-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.ie-modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
