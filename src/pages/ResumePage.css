@@ -1,0 +1,31 @@
+.resume-overview-page { background: var(--theme-resume-bg); min-height: 100vh; }
+
+.resume-calendar-section { margin-bottom: 20px; }
+.section-title { font-size: var(--font-size-md); font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
+
+/* 入口卡片 */
+.resume-entry-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.resume-entry-card { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); cursor: pointer; transition: all 0.2s ease; background: var(--bg-card); }
+.resume-entry-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+
+.entry-card-header { display: flex; align-items: center; gap: 14px; padding: 20px 18px; color: #fff; }
+.entry-card-emoji { font-size: 34px; flex-shrink: 0; }
+.entry-card-title { font-size: var(--font-size-md); font-weight: 700; }
+.entry-card-desc { font-size: var(--font-size-xs); opacity: 0.85; margin-top: 4px; }
+
+.entry-card-footer { display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; }
+.entry-card-count { font-size: var(--font-size-sm); color: var(--text-secondary); font-weight: 500; }
+.entry-card-arrow { font-size: var(--font-size-md); color: var(--text-tertiary); }
+
+/* 详情弹窗 */
+.detail-content { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.detail-row { display: flex; gap: 12px; align-items: flex-start; }
+.detail-label { font-size: var(--font-size-xs); color: var(--text-tertiary); min-width: 70px; flex-shrink: 0; font-weight: 500; }
+.detail-val { font-size: var(--font-size-sm); color: var(--text-primary); flex: 1; }
+.detail-block { display: flex; flex-direction: column; gap: 4px; }
+.detail-block .detail-val { margin-top: 4px; line-height: 1.7; }
+.detail-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+@media (max-width: 767px) {
+  .resume-entry-cards { grid-template-columns: 1fr; }
+}

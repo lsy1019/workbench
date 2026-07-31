@@ -1,0 +1,303 @@
+.proj-page { background: var(--theme-resume-bg); min-height: 100vh; }
+
+/* ===== 简历风格时间线 ===== */
+.proj-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.proj-resume-item {
+  display: flex;
+  gap: 0;
+}
+
+/* 时间线 */
+.proj-timeline-bar {
+  width: 32px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.proj-timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9B8E9A;
+  flex-shrink: 0;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #9B8E9A;
+  z-index: 1;
+}
+.proj-timeline-line {
+  width: 2px;
+  flex: 1;
+  background: var(--border-color);
+  margin-top: -2px;
+  min-height: 20px;
+}
+
+/* 内容卡片 */
+.proj-resume-body {
+  flex: 1;
+  display: flex;
+  gap: 14px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  position: relative;
+  align-items: flex-start;
+  user-select: text;
+}
+.proj-resume-body:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--macaron-rose);
+}
+
+/* 附件缩略图 */
+.proj-resume-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #F3E5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  transition: all 0.15s;
+}
+.proj-resume-thumb:hover {
+  border-color: var(--macaron-rose);
+  transform: scale(1.05);
+}
+.proj-resume-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.proj-resume-thumb-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* 内容 */
+.proj-resume-content {
+  flex: 1;
+  min-width: 0;
+}
+.proj-resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.proj-resume-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.proj-resume-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.proj-resume-role {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.proj-resume-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.proj-resume-desc-en {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.proj-resume-tech {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.proj-resume-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--theme-resume-secondary);
+  color: var(--theme-resume-accent);
+  font-weight: 500;
+}
+.proj-resume-tag-dim {
+  background: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+/* 项目亮点 */
+.proj-resume-highlights {
+  padding-left: 18px;
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.proj-resume-highlights-en {
+  color: var(--text-tertiary);
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* 项目链接 */
+.proj-resume-link {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--theme-resume-accent);
+  text-decoration: none;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+.proj-resume-link:hover {
+  text-decoration: underline;
+}
+
+/* 空缩略图 */
+.proj-resume-thumb-empty {
+  background: #E8D5F5;
+}
+.proj-resume-thumb-empty .proj-resume-thumb-icon {
+  font-size: 24px;
+}
+
+/* 附件文件链接 */
+.proj-resume-files {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.proj-resume-file-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--macaron-rose);
+  cursor: pointer;
+  padding: 3px 10px;
+  background: var(--macaron-blush);
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.proj-resume-file-link:hover {
+  background: #fce4ec;
+  text-decoration: underline;
+}
+
+/* 操作按钮 */
+.proj-resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.proj-resume-body:hover .proj-resume-actions {
+  opacity: 1;
+}
+.proj-resume-actions button {
+  border: none;
+  background: rgba(0,0,0,0.05);
+  cursor: pointer;
+  font-size: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.proj-resume-actions button:hover {
+  background: rgba(232, 160, 176, 0.2);
+}
+
+/* ===== 详情弹窗 ===== */
+.detail-content { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.detail-row { display: flex; gap: 12px; align-items: flex-start; }
+.detail-label { font-size: var(--font-size-xs); color: var(--text-tertiary); min-width: 70px; flex-shrink: 0; font-weight: 500; }
+.detail-val { font-size: var(--font-size-sm); color: var(--text-primary); flex: 1; }
+.detail-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.detail-block { display: flex; flex-direction: column; gap: 6px; }
+.detail-block .detail-label { min-width: auto; }
+.detail-list { padding-left: 18px; font-size: var(--font-size-sm); color: var(--text-secondary); line-height: 1.8; }
+.detail-link { color: var(--theme-resume-accent); text-decoration: none; font-size: var(--font-size-sm); word-break: break-all; }
+.detail-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
+
+.detail-attachments {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.detail-attachment-link {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--macaron-rose);
+  cursor: pointer;
+  padding: 6px 10px;
+  background: var(--macaron-blush);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.detail-attachment-link:hover {
+  background: #fce4ec;
+  text-decoration: underline;
+}
+
+.form-group { margin-bottom: 14px; }
+.form-label { display: block; font-size: var(--font-size-sm); font-weight: 500; color: var(--text-secondary); margin-bottom: 6px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.modal-sheet textarea.input { resize: vertical; font-family: var(--font-family); }
+
+@media (max-width: 767px) {
+  .proj-resume-body {
+    flex-direction: column;
+    padding: 12px;
+  }
+  .proj-resume-thumb {
+    width: 48px;
+    height: 48px;
+  }
+  .proj-resume-thumb-icon {
+    font-size: 22px;
+  }
+  .proj-resume-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .proj-timeline-bar {
+    width: 24px;
+    padding-top: 18px;
+  }
+  .proj-timeline-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
